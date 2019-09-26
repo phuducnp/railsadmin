@@ -31,3 +31,10 @@
 
 en:
   hello: "Hello world"
+  books: 'Books'
+  admin:
+    actions:
+      show_store:
+        menu: 'Show Store'
+        title: 'Show Store'
+        breadcrumb: 'Show Store'

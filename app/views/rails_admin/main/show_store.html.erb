@@ -1,0 +1,20 @@
+<% if @books.any? %>
+  <label class="books-count">
+    <%= pluralize @books.count, t("books") %>
+  </label>
+  <table class="table">
+    <tbody>
+      <% @books.each do |book| %>
+        <tr>
+          <td>
+            <div class="form-group">
+              <%= link_to book.name,  rails_admin.show_path("book", book.id) %>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <%= t "admin.actions.no_book" %>
+<% end %>
